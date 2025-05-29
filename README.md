@@ -18,12 +18,12 @@ se recomienda usar una base de datos  que ya tenga infromación para poder revis
 
 Dockerfile
 
-FROM odoo:17
+*FROM odoo:17
 
-USER root
-RUN apt-get update -y
-RUN apt-get upgrade -y
-RUN pip3 install xmltodict
-RUN pip3 install ipdb
-RUN apt-get install python3-openssl -y
-RUN pip3 install odoo-test-helper
+*USER root
+*RUN apt-get update -y
+*RUN apt-get upgrade -y
+*RUN pip3 install xmltodict
+*RUN pip3 install ipdb
+*RUN apt-get install python3-openssl -y
+*RUN pip3 install odoo-test-helper
