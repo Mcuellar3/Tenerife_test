@@ -1,0 +1,55 @@
+<odoo>
+
+    <template id="report_product_document_custom" name="recibo_mamalon_pdf">
+        <t t-call="web.external_layout">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+
+                    <h4>Producto</h4>
+                    <p><t t-esc="doc.name"/></p>
+                    <br/>
+
+                    <h4>Descripción breve</h4>
+                    <p><t t-esc="doc.x_description_product"/></p>
+                    <br/>
+
+                    <h4>Código</h4>
+                    <p><t t-esc="doc.default_code"/></p>
+                    <br/>
+
+                    <h4>Precio Unitario</h4>
+                    <p>$<t t-esc="doc.list_price"/></p>
+                    <br/>
+
+                    <t t-if="doc.image_1920">
+                        <h4 style="text-align: center;">Imagen del producto</h4>
+                        <div class="product-image" style="text-align: center;">
+                            <img t-att-src="'/web/image/product.template/%s/image_1920' % doc.id" style="max-width: 400px;"/>
+                        </div>
+                    </t>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    
+    <template id="product_custom_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="tenerife_test.report_product_document_custom"/>
+            </t>
+        </t>
+    </template> 
+
+    <record id="action_product_custom_report" model="ir.actions.report">
+        <field name="name">Reporte de Producto</field>
+        <field name="model">product.template</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tenerife_test.product_custom_report</field>
+        <field name="report_file">tenerife_test.product_custom_report</field>
+        <field name="print_report_name">'%s' % object.name</field>
+        <field name="binding_model_id" ref="model_product_template"/>
+        <field name="binding_type">report</field>
+    </record>
+    
+</odoo>
