@@ -9,7 +9,7 @@ El módulo ya tiene en el manifest las dependencias que necesita.
 debe ir a Aplicaciones, Actualizar la lista de aplicaciones y Activar el módulo de "tenerife_test"
 se recomienda usar una base de datos  que ya tenga infromación para poder revisar todas la funcionalidades
 
-para el punto número 1 entra a la vista de prodcut.template y tendrá el smart button
-para el punto número 2 Entra a ventas, el submenú de prodcutos y verá la opción "Asignar Etiquetas Masivas" allí seleccionar lso rpdcutos y las etiquetas que necesite
-para el punto número 3 en prodcut.template se agregó un grupo donde puede ver el campo M2M para las etiquetas
-para el punto número 4 en prodcut.template se agregó un campo para la descipoción breve, en al parte superior debe hacer click en Acciones y en Reporte de Prodcuto
+* Para el punto número 1 entra a la vista de prodcut.template y tendrá el smart button.
+* Para el punto número 2 Entra a ventas, el submenú de prodcutos y verá la opción "Asignar Etiquetas Masivas" allí seleccionar lso rpdcutos y las etiquetas que necesite.
+* Para el punto número 3 en prodcut.template se agregó un grupo donde puede ver el campo M2M para las etiquetas.
+* Para el punto número 4 en prodcut.template se agregó un campo para la descipoción breve, en al parte superior debe hacer click en Acciones y en Reporte de Prodcuto.
